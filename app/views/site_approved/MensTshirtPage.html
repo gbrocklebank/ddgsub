@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en-EU">
+<head>
+<title>
+DDG MENS T-SHIRT PAGE
+</title>
+<link rel="styleSheet" href="layout.css"/>
+</head>
+<body>
+<div>
+<div class="logo">
+<h1>|  DDG MENS T-SHIRT |</h1>
+	<div class="Search">
+     
+    <%# form_tag tshirts_path, :method => 'get' do %>
+        <%# text_field_tag :search, params[:search] %>
+    <%# submit_tag "Search" %>
+    <%# end %>
+    
+		<p>SEARCH</P>
+	</div>
+</div>
+
+<div class="nav">
+	<ul>
+		<a href="/basket"><li>BASKET</li></a>
+		
+		<a href="/signin"><li>SIGN IN</li></a>
+		
+		<a href="/her"><li>HER</li></a>
+		
+		<a href="/him"><li>HIM</li></a>
+		
+		<a href="/homepage"><li>HOME</li></a>
+		
+	</ul>
+</div>
+<div class="container">
+<div class="tshirtContainer">
+<div class="tshirtBig">
+<img src="Stills/StockPic/Him/HimOneTwo.jpg" width="100%" height="100%"/>
+</div>
+<div class="tshirtSmall">
+<img src="Stills/StockPic/Him/HimOneTwo.jpg" width="100%" height="100%"/>
+</div>
+<div class="tshirtSmall">
+<img src="Stills/StockPic/Him/HimOneOne.jpg" width="100%" height="100%"/>
+</div>
+</div>
+<div class="tshirtInfo">
+<div class="info">
+<h1> the name of the tShirt</h1>
+<h4> more info about the tshirt</h4>
+</div>
+<div class="small">
+<h4>SMALL</H4>
+</div>
+<div class="medium">
+<h4>MEDIUM</H4>
+</div>
+<div class="large">
+<h4>LARGE</H4>
+</div>
+<div class="addto">
+<h2>ADD TO BASKET</h2>
+</div>
+</div>
+</div>
+
+</div>
+<div class="hold">
+</div>
+
+<div class="footer">
+	
+    <div class="sociallink"><a href="https://twitter.com/?lang=en">
+		<%= image_tag "Stills/LOGOS/twitter1.png",width:"100%", height:"100%" %>
+		</a></div>
+	
+	<div class="sociallink"><a href="https://www.facebook.com/">
+		<%= image_tag "Stills/LOGOS/facebook1.png",width:"100%", height:"100%" %>
+		</a></div>
+	
+	<div class="sociallink"><a href="https://www.youtube.com/">
+		<%= image_tag "Stills/LOGOS/youtube1.png",width:"100%", height:"100%" %>
+		</a></div>
+	
+	<div class="sociallink"><a href="https://www.instagram.com/?hl=en">
+		<%= image_tag "Stills/LOGOS/instagram1.png",width:"100%", height:"100%" %>
+		</a></div>
+
+</div>
+
+</div>
+</body>
+</html>

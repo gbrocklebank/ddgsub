@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>DDG</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  
+   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <% if request.ssl? %>
+    <%= stylesheet_link_tag 'https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css' %>
+    <%= javascript_include_tag 'https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js' %>
+  <% else %>
+    <%= stylesheet_link_tag 'http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css' %>
+    <%= javascript_include_tag 'http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js' %>
+  <% end %>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+
+  <%= csrf_meta_tags %>
+  <!DOCTYPE html>
+
+    <link rel="styleSheet" href="layout.css"/>
+</head>
+
+<body>
+<div >
+<div class="logo">
+<h1>|  DDG |</h1>
+	<div class="Search">
+	       
+    <%= form_tag items_path, :method => 'get' do %>
+        <%= text_field_tag :search, params[:search] %>
+    <%= submit_tag "Search" %>
+    <% end %>
+  
+	</div>
+</div>
+
+
+<div class="nav">
+	<ul>
+		
+		
+		<a href="/cart"><li>BASKET</li></a>
+		
+		<a href="/admin"><li>SIGN IN</li></a>
+		
+		<a href="/her"><li>HER</li></a>
+		
+		<a href="/him"><li>HIM</li></a>
+		
+		<a href="/homepage"><li>HOME</li></a>
+		
+		</li>
+	</ul>
+</div>
+
+
+
+
+
+  
+    
+   
+ 
+      <p ><%= flash[:notice] %></p>
+      <p ><%= flash[:alert] %></p>
+      <%= yield %>
+       
+
+   
+<div class="containerIndex">
+<div class="container">
+  
+  
+</div>
+</div>
+  
+<div class="container">
+    
+  
+  
+     <% if user_signed_in? %>
+        <div>Signed <%= current_user.email %> (<%= link_to "Sign Out", destroy_user_session_path, :method => :delete %>)</div>
+      <% else %>
+        <%= link_to 'Register', new_user_registration_path %> or  <% link_to 'Sign in', new_user_session_path %>
+      <% end %>
+</div>
+<div class="footer">
+	
+    <div class="sociallink"><a href="https://twitter.com/?lang=en">
+		<%= image_tag "Stills/LOGOS/twitter1.png",width:"100%", height:"100%" %>
+		</a></div>
+	
+	<div class="sociallink"><a href="https://www.facebook.com/">
+		<%= image_tag "Stills/LOGOS/facebook1.png",width:"100%", height:"100%" %>
+		</a></div>
+	
+	<div class="sociallink"><a href="https://www.youtube.com/">
+		<%= image_tag "Stills/LOGOS/youtube1.png",width:"100%", height:"100%" %>
+		</a></div>
+	
+	<div class="sociallink"><a href="https://www.instagram.com/?hl=en">
+		<%= image_tag "Stills/LOGOS/instagram1.png",width:"100%", height:"100%" %>
+		</a></div>
+
+</div>
+
+
+</div>
+</body>
+
+</html>
