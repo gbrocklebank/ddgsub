@@ -1,6 +1,6 @@
 
 
-<div class="containerIndex">
+
 <% if @cart.empty? %>
     <p>Your Cart is empty</p>
 <% end %>
@@ -48,9 +48,9 @@
 
 <p>
     
-    <%= link_to '<button type="button">New Post</button>'.html_safe,  %>
-    
+  <%= button_to number_to_currency(total, :unit => "Eur "), new_registration_path, :id => "checkout-dialog-btn",
+      :class => "ruby", :method => :get %>
+  
     </p>
     
 
-</div>

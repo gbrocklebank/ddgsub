@@ -29,6 +29,11 @@ Rails.application.routes.draw do
   resources :cart, only: [:show]
   resources :order_items, only: [:create, :update, :destroy]
   
+  resources :registrations
+  post "/hook" => "registrations#hook"
+  post "/registrations/:id" => "registrations#show"
+  
+  
   
   
   

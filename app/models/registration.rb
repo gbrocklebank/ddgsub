@@ -11,9 +11,6 @@ class Registration < ActiveRecord::Base
         upload: 1,
         return: "#{Rails.application.secrets.app_host}#{return_path}",
         invoice: id,
-        amount: course.price,
-        item_name: course.name,
-        item_number: course.id,
         quantity: '1',
         notify_url: "#{Rails.application.secrets.app_host}/hook"
     }

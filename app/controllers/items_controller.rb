@@ -12,12 +12,19 @@ class ItemsController < ApplicationController
   end
 
 
+
   #def her
-   #  @items_her = Item.where(["category LIKE ?","%#{params[:search]}%"])
+  #   @items_her = Item.find(["category Her ?","%#{params[:search]}%"])
   #end
   
-
-
+  def her
+    @items = Item.all
+    #@items_her = Item.find_by category: params["Her"]
+  end
+  
+  def him
+    @items_him = Item.where(["category Him ?","%#{params[:search]}%"])
+  end
 
 
   # GET /items/1
