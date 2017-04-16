@@ -12,10 +12,11 @@ DDG
 
 <h1>Product Catalog</h1>
 <br />
-<div class="conHolder">
-<div class="wrapper"> 
+
 
 <% @items.each do |item| %>
+
+<div class="wrapper"> 
   <tr>
     <td>
       <div class="image">
@@ -43,10 +44,10 @@ DDG
       </div>
     </td>
   </tr>
+  </div>
+
 <% end %>
-<div class="priceWrapper">
-</div>
-</div>
+
 </div>
 <!--% if session[:login] == 1 %-->
 <% if current_user.admin? %>
